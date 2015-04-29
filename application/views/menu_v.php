@@ -15,14 +15,13 @@
                         </div>
                         
                         <div class="panel-body">
-                            <form class="form-signin" role="form" method="post" action="<?php echo base_url(); ?>booking">
+                            <form class="form-signin" role="form" method="post" action="">
                                <fieldset>
                                     
                                     <button class="btn btn-lg btn-success btn-block" type="submit" name="booking" ><span class="menu-title"><strong>BOOKING&nbsp;&nbsp;</strong></span><i class="fa fa-sign-in fa-2x"></i></button>
                                     <br>
                                     <button class="btn btn-lg btn-success btn-block" type="submit" name="payment"><span class="menu-title"><strong>PAYMENT&nbsp;&nbsp;</strong></span><i class="fa fa-credit-card fa-2x"></i></button>
 
-                                    
                                 </fieldset>
                             </form>
                         </div>

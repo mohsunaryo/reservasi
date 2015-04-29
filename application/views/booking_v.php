@@ -15,7 +15,7 @@
                             <tr >
                                 <td>Kode Penyewa</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="kd_penyewa" type="text" required></td>
+                                <td><textarea class="form-controlx" name="kd_penyewa" type="text" required><?php echo $kd_data_penyewa; ?></textarea></td>
                                 <td width="20"></td>
                                 <td>Kode Booking&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -24,7 +24,7 @@
                             <tr >
                                 <td>Nama</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="nama_penyewa" type="text" required></td>
+                                <td><textarea class="form-controlx" name="nama_penyewa" type="text" required><?php echo $nama_penyewa; ?></textarea></td>
                                 <td width="20"></td>
                                 <td>Kode Gedung&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -33,7 +33,7 @@
                             <tr>
                                 <td >Alamat</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="alamat" type="text" required></td>
+                                <td><textarea class="form-controlx" name="alamat" type="text" required><?php echo $alamat; ?></textarea></td>
                                 <td width="20"></td>
                                 <td>Kode Tipe Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -42,7 +42,7 @@
                             <tr>
                                 <td >Telepon&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="no_telp" type="text" required></td>
+                                <td><textarea class="form-controlx" name="no_telp" type="text" required><?php echo $no_telp; ?></textarea></td>
                                 <td width="20"></td>
                                 <td>Harga&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>

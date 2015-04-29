@@ -6,13 +6,50 @@ class Transaksi extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		// $this->load->model('berita_m');
-		// $this->load->model('info_m');
-
+		$this->load->model('transaksi_m');
+		$this->load->model('penyewa_m');
+		$this->load->model('gedung_m');
+		$this->load->model('tipe_sewa_m');
 	}
 
 	function index()
 	{
+		$transaksi = $this->transaksi_m->selectAll();
+		$data['data'] = "";
+		$no = 1;
+		foreach ($transaksi as $row)
+		{
+			$penyewa = $this->penyewa_m->selectBy('kd_data_penyewa', $row->kd_data_penyewa)->row();
+			$gedung = $this->gedung_m->selectBy('kd_gedung', $row->kd_gedung)->row();
+			$tipe_sewa = $this->tipe_sewa_m->selectBy('kd_tipe_sewa', $row->kd_tipe_sewa)->row();
+
+			if ($row->lunas==1)
+            {
+            	$row->lunas = 'lunas';
+            }
+            else
+            {
+            	$row->lunas = 'belum lunas';
+            }
+
+			$data['data'] .= "<tr>
+                                <td>$no.</td>
+                                <td>$row->kd_booking_gedung</td>
+                                <td>$penyewa->nama_penyewa</td>
+                                <td>$gedung->nama_gedung</td>
+                                <td>$tipe_sewa->nama_tipe_sawa</td>
+                                <td>$row->tanggal_booking</td>
+                                <td>$row->tanggal_sewa</td>
+                                <td>$row->durasi</td>
+                                <td>$row->jumlah_tamu</td>
+                                <td>$row->keterangan</td>
+                                <td>$row->lunas</td>
+                                					
+                                
+                            </tr>";
+
+            $no++;
+		}
 
 		$data['title'] = 'Transaksi';
 		$data['main_view'] = 'transaksi_v';

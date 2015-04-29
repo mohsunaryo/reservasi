@@ -13,7 +13,10 @@ class Menu extends CI_Controller
 
 	function index()
 	{
-
+		if ($this->input->post('booking'))
+		{
+			redirect(base_url().'penyewa');
+		}
 		$data['title'] = 'Menu';
 		$data['main_view'] = 'menu_v';
 		$this->load->view('templatemenu_v', $data);

@@ -12,15 +12,15 @@
     <title>Regent's Park Hotel</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/freelancer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url(); ?>http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,9 +56,9 @@
                     <li class="page-scroll">
                         <a href="<?php echo base_url(); ?>penyewa"><i class="fa fa-users"></i>&nbsp;&nbsp;Penyewa</a>
                     </li>
-                    <li class="page-scroll">
+                    <!-- <li class="page-scroll">
                         <a href="<?php echo base_url(); ?>booking"><i class="fa fa-book"></i>&nbsp;&nbsp;Booking</a>
-                    </li>
+                    </li> -->
                     <li class="page-scroll">
                         <a href="<?php echo base_url(); ?>transaksi"><i class="fa fa-dollar"></i>&nbsp;&nbsp;Transaksi</a>
                     </li>
@@ -101,19 +101,19 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="<?php echo base_url(); ?>js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="<?php echo base_url(); ?>http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/classie.js"></script>
+    <script src="<?php echo base_url(); ?>js/cbpAnimatedHeader.js"></script>
 
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="<?php echo base_url(); ?>js/freelancer.js"></script>
 
 </body>
 

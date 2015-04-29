@@ -12,75 +12,30 @@
                     <div class="tabel">
                     <form action="" method="post" role="form" action="<?php echo base_url(); ?>booking">
                         <table border="0" class="table-responsive">
-                            <tr >
-                                <td>Kode Penyewa</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Kode Booking&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr >
-                                <td>Nama</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Nama Gedung&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td >Alamat</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Tipe Sewa&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td >Telepon&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Harga&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td >Tanggal Booking&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Tanggal Sewa&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td >Durasi&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Jumlah Tamu&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td >Keterangan&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                                <td width="20"></td>
-                                <td>Lunas&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <!-- <td><br><input type="submit" class="btn btn-primary" name="add" id="submit" value="PROSES"></td> -->
-                            </tr>
+                            
+
                         </table>
+
+                        <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Kode Booking</th>
+                                <th>Nama Penyewa</th>
+                                <th>Nama Gedung</th>
+                                <th>Tipe Sewa</th>
+                                <th>Tanggal Booking</th>
+                                <th>Tanggal Sewa</th>
+                                <th>Durasi</th>
+                                <th>Jumlah Tamu</th>
+                                <th>Keterangan</th>
+                                <th>Lunas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php echo isset($data) ? $data : ''; ?>
+                        </tbody>
+                    </table>
                         </div>
                     </form>
                 </div>
