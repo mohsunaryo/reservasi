@@ -25,18 +25,41 @@ class Booking extends CI_Controller
 	{
 		$id = $this->uri->segment(3);
 		$penyewa = $this->penyewa_m->selectBy('kd_data_penyewa', $id)->result();
+		$tipe_sewa = $this->tipe_sewa_m->selectAll();
+		$gedung = $this->gedung_m->selectAll();
+
 		foreach ($penyewa as $row)
 		{
 			$data['kd_data_penyewa'] = $row->kd_data_penyewa;
 			$data['nama_penyewa'] = $row->nama_penyewa;
 			$data['alamat'] = $row->alamat;
 			$data['no_telp'] = $row->no_telp;
-			// $alumni = $this->alumni_m->selectBy('id_alumni', $row->id_alumni)->row();
-			// $data['nama'] = $alumni->nama;
+			// $tipe_sewa = $this->tipe_sewa_m->selectBy('kd_tipe_sewa', $row->kd_tipe_sewa)->row();
+			// $data['nama_tipe_sawa'] = $tipe_sewa->nama_tipe_sawa;
 			// $data['judul'] = $row->judul;
 			// $data['isi_info'] = $row->isi_info;
         }
-		$data['title'] = 'Booking';
+
+        if ($this->input->post('add'))
+		{
+			$data = array('kd_booking_gedung' => $this->input->post('kd_booking')
+						  ,'kd_data_penyewa' => $this->input->post('kd_penyewa')
+						  ,'kd_gedung' => $this->input->post('gedung')
+						  ,'kd_tipe_sewa' => $this->input->post('tipe_sewa')
+						  ,'tanggal_booking' => $this->input->post('tanggal_booking')
+						  ,'tanggal_sewa' => $this->input->post('tanggal_sewa')
+						  ,'durasi' => $this->input->post('durasi')
+						  ,'jumlah_tamu' => $this->input->post('jumlah_tamu')
+						  ,'keterangan' => $this->input->post('keterangan')
+						  ,'lunas' => $this->input->post('lunas'));
+			$this->transaksi_m->insert($data);
+			redirect(base_url().'booking/view');
+			
+		}
+
+        $data['tipe_sewa'] = $this->tipe_sewa_m->selectAll();
+        $data['gedung'] = $this->gedung_m->selectAll();
+
 		$data['main_view'] = 'booking_v';
 		$this->load->view('templatemenu_v', $data);
 	}
